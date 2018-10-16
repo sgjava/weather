@@ -59,7 +59,7 @@ known as the APIID:
 * Select the API Keys tab and copy the key to config.lua
 
 ### Add components
-![Wired](images/wired.png)
+[![Wired](images/wired.png)](https://youtu.be/fkJwU8Bs6V0)
 I powered everything off the NodeMCU for simplicity. I also have powered
 everything off the breadboard power rail. Feel free to wire it up any way
 you want though. If you use different GPIO pins then update config.lua. If
