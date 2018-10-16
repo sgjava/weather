@@ -1,0 +1,21 @@
+-- wifi configuration
+wifi_config = {
+  ip = "192.168.1.69",
+  netmask = "255.255.255.0",
+  gateway ="192.168.1.1",
+  ssid = "your_ssid",
+  pwd = "your_password"}
+-- main configuration
+main_config = {
+  ntp_host = "216.6.2.70",
+  timezone_offset = -4,
+  update_interval = 10000,
+  dht_pin = 1,
+  button_pin = 4,
+  button_debounce = 200,
+  sda_pin = 2,
+  scl_pin = 3,
+  sla_addr = 0x3c,
+  api_key = "9249eedd27aba742372399a0c41ffbf1",
+  zip_code = 34219,
+  url = "http://api.openweathermap.org/data/2.5/weather?zip=%s,us&units=imperial&appid=%s"}
