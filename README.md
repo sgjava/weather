@@ -62,14 +62,14 @@ known as the APIID:
 [![Wired](images/wired.png)](https://youtu.be/fkJwU8Bs6V0)
 I powered everything off the NodeMCU for simplicity. I also have powered
 everything off the breadboard power rail. Feel free to wire it up any way
-you want though. If you use different GPIO pins then update config.lua. If
+you want though. If you use different I2C/GPIO pins then update config.lua. If
 you want to wire it exactly as the picture above then look at current
 config.lua:
 * D1 AM2302
 * D2 SSD1306 SDA
 * D3 SSD1306 SCL
 * D4 Button (note only top two pins are used)
-* All three 3V/G pins are used for power
+* All three 3V/G pin pairs are used for power
 
 ### Load Lua files
 Using ESPlorer I open all the source files and use Save to ESP button in this order:
