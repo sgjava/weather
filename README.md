@@ -70,3 +70,15 @@ config.lua:
 * D3 SSD1306 SCL
 * D4 Button (note only top two pins are used)
 * All three 3V/G pins are used for power
+
+### Load Lua files
+Using ESPlorer I open all the source files and use Save to ESP button in this order:
+
+* config.lua
+* wifi_connect.lua
+* display.lua
+* main.lua (this will crash the first time it runs because init.lua sets up display)
+* init.lua
+
+If you are lucky and everything is wired and configured correctly then you should
+have a working weather station. 
