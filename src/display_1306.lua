@@ -17,10 +17,12 @@ end
 -- @param y number: Y coordinate.
 -- @param str string: String to display.
 function str_display(x, y, str)
-  disp:firstPage()
-  repeat
-    disp:drawStr(x, y, str)
-  until disp:nextPage() == false
+  if str then
+    disp:firstPage()
+    repeat
+      disp:drawStr(x, y, str)
+    until disp:nextPage() == false
+  end
 end
 
 --- Display temperature and humidity.
@@ -28,12 +30,14 @@ end
 -- @param temp number: Temperature.
 -- @param humi number: Humidity.
 function temp_display(msg, temp, humi)
-  disp:firstPage()
-  repeat
-    disp:drawStr(0, 0, msg)
-    disp:drawStr(0, 20, string.format("T %6.1f",temp))
-    disp:drawStr(0, 40, string.format("H %6.1f",humi))
-  until disp:nextPage() == false
+  if msg and temp and humi then
+    disp:firstPage()
+    repeat
+      disp:drawStr(0, 0, msg)
+      disp:drawStr(0, 20, string.format("T %6.1f",temp))
+      disp:drawStr(0, 40, string.format("H %6.1f",humi))
+    until disp:nextPage() == false
+  end
 end
 
 --- Display weather data.
@@ -41,24 +45,28 @@ end
 -- @param temp_lo number: Low temperature.
 -- @param temp_hi number: High temperature.
 function weather_display(pressure, temp_lo, temp_hi)
-  disp:firstPage()
-  repeat
-    disp:drawStr(0, 0, string.format("P %6d", pressure))
-    disp:drawStr(0, 20, string.format("L %6.1f",temp_lo))
-    disp:drawStr(0, 40, string.format("H %6.1f",temp_hi))
-  until disp:nextPage() == false
+  if pressure and temp_lo and temp_hi then
+    disp:firstPage()
+    repeat
+      disp:drawStr(0, 0, string.format("P %6d", pressure))
+      disp:drawStr(0, 20, string.format("L %6.1f",temp_lo))
+      disp:drawStr(0, 40, string.format("H %6.1f",temp_hi))
+    until disp:nextPage() == false
+  end
 end
 
 --- Display temperature and humidity.
 -- @param msg string: Message to display at top.
 -- @param tm table: rtctime.epoch2cal table.
 function time_display(msg, tm)
-  disp:firstPage()
-  repeat
-    disp:drawStr(0, 0, msg)
-    disp:drawStr(0, 20, string.format("%02d/%02d/%02d", tm["mon"], tm["day"], tm["year"]-2000))
-    disp:drawStr(0, 40, string.format("%02d:%02d:%02d", tm["hour"], tm["min"], tm["sec"]))
-  until disp:nextPage() == false
+  if msg and tm then
+    disp:firstPage()
+    repeat
+      disp:drawStr(0, 0, msg)
+      disp:drawStr(0, 20, string.format("%02d/%02d/%02d", tm["mon"], tm["day"], tm["year"]-2000))
+      disp:drawStr(0, 40, string.format("%02d:%02d:%02d", tm["hour"], tm["min"], tm["sec"]))
+    until disp:nextPage() == false
+  end
 end
 
 --- Put display to sleep.
