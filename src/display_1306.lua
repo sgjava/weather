@@ -3,8 +3,8 @@
 -- @param scl number: SCL pin number.
 -- @param sda number: SLA address.
 function init_display(sda, scl, sla)
-  i2c.setup(i2c.HW0, sda, scl, i2c.SLOW)
-  disp = u8g2.ssd1306_i2c_128x64_noname(i2c.HW0, sla)
+  i2c.setup(0, sda, scl, i2c.SLOW)
+  disp = u8g2.ssd1306_i2c_128x64_noname(0, sla)
   -- Set your font here
   disp:setFont(u8g2.font_courR18_tr)
   disp:setFontRefHeightExtendedText()
