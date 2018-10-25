@@ -68,10 +68,10 @@ end
 
 --- Put display to sleep.
 function sleep_display()
-  disp:sleepOn()
+  disp:setPowerSave(1)
 end
 
 --- Wake up display.
 function wake_display()
-  disp:sleepOff()
+  disp:setPowerSave(0)
 end
