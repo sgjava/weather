@@ -45,7 +45,7 @@ point image produced from NodeMCU custom builds site.
 * Follow the [Run NodeMCU on ESP8266 LoLin V3](https://github.com/sgjava/nodemcu-lolin)
 directions. In the NodeMCU custom builds site:
 * Select the master branch
-* Select the following modules: dht,file,gpio,http,i2c,net,node,rtctime,sjson,sntp,tmr,u8g,uart,wifi,tls
+* Select the following modules: dht,file,gpio,http,i2c,net,node,rtctime,sjson,sntp,tmr,u8g2,uart,wifi,tls
 * Select font_courR18 font
 
 ### Open Weather Map
